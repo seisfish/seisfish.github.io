@@ -317,6 +317,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
         </div>
           
@@ -477,6 +478,24 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '0a4a343c7358f1b30e00',
+      clientSecret: '7c849d9053bd975f40810d5e47b83d146e9c7d02',
+      repo: 'seisfish.github.io',
+      owner: 'seisfish',
+      admin: ['seisfish'],
+      id: 'a6287477c411bf19a28ef650ae392e99',
+        language: '',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
 </body>
 </html>
