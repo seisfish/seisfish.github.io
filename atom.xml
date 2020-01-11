@@ -5,9 +5,9 @@
   <subtitle>Diving into Marine Geoscience</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://seisfish.github.io/"/>
   <updated>2020-01-10T16:09:30.252Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://seisfish.github.io/</id>
   
   <author>
     <name>Yu Ren</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Open Access Geo-databases</title>
-    <link href="http://yoursite.com/2020/01/09/Links/"/>
-    <id>http://yoursite.com/2020/01/09/Links/</id>
+    <link href="https://seisfish.github.io/2020/01/09/Links/"/>
+    <id>https://seisfish.github.io/2020/01/09/Links/</id>
     <published>2020-01-09T18:35:26.270Z</published>
     <updated>2020-01-10T16:09:30.252Z</updated>
     
@@ -34,26 +34,26 @@
     </summary>
     
     
-      <category term="Resource" scheme="http://yoursite.com/categories/Resource/"/>
+      <category term="Resource" scheme="https://seisfish.github.io/categories/Resource/"/>
     
-      <category term="Data" scheme="http://yoursite.com/categories/Resource/Data/"/>
+      <category term="Data" scheme="https://seisfish.github.io/categories/Resource/Data/"/>
     
     
-      <category term="Data" scheme="http://yoursite.com/tags/Data/"/>
+      <category term="Data" scheme="https://seisfish.github.io/tags/Data/"/>
     
-      <category term="Earthquake Catalog" scheme="http://yoursite.com/tags/Earthquake-Catalog/"/>
+      <category term="Earthquake Catalog" scheme="https://seisfish.github.io/tags/Earthquake-Catalog/"/>
     
-      <category term="Focal Mechanism" scheme="http://yoursite.com/tags/Focal-Mechanism/"/>
+      <category term="Focal Mechanism" scheme="https://seisfish.github.io/tags/Focal-Mechanism/"/>
     
-      <category term="Earth Model" scheme="http://yoursite.com/tags/Earth-Model/"/>
+      <category term="Earth Model" scheme="https://seisfish.github.io/tags/Earth-Model/"/>
     
-      <category term="Gravity" scheme="http://yoursite.com/tags/Gravity/"/>
+      <category term="Gravity" scheme="https://seisfish.github.io/tags/Gravity/"/>
     
-      <category term="Geomagnetism" scheme="http://yoursite.com/tags/Geomagnetism/"/>
+      <category term="Geomagnetism" scheme="https://seisfish.github.io/tags/Geomagnetism/"/>
     
-      <category term="Heat Flow" scheme="http://yoursite.com/tags/Heat-Flow/"/>
+      <category term="Heat Flow" scheme="https://seisfish.github.io/tags/Heat-Flow/"/>
     
-      <category term="Volcano" scheme="http://yoursite.com/tags/Volcano/"/>
+      <category term="Volcano" scheme="https://seisfish.github.io/tags/Volcano/"/>
     
   </entry>
   
