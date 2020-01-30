@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://seisfish.github.io/2020/01/09/Links/</loc>
+    
+    <lastmod>2020-01-30T18:18:30.072Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://seisfish.github.io/tags/index.html</loc>
     
     <lastmod>2020-01-10T16:52:02.427Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://seisfish.github.io/categories/index.html</loc>
     
     <lastmod>2020-01-10T16:51:52.037Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://seisfish.github.io/2020/01/09/Links/</loc>
-    
-    <lastmod>2020-01-10T16:09:30.252Z</lastmod>
     
   </url>
   
