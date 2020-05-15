@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://seisfish.github.io/"/>
-  <updated>2020-05-13T11:55:12.318Z</updated>
+  <updated>2020-05-15T13:09:27.699Z</updated>
   <id>https://seisfish.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GMT netCDF &amp; Arc ASCII data format conversion</title>
+    <link href="https://seisfish.github.io/Conversion/"/>
+    <id>https://seisfish.github.io/Conversion/</id>
+    <published>2020-04-05T15:09:02.206Z</published>
+    <updated>2020-05-15T13:09:27.699Z</updated>
+    
+    <content type="html"><![CDATA[<p>ArcGIS has unique advantages in spatial analysis of Geographic Information System, so it has become the main tool for my current research. However, in the process of communication, due to the differences in the main tools for data processing and displaying, we often encounter the problem of data format conversion. This post shows you how to use the GMT 4 command to convert the Arc ASCII data format to a netCDF recognized by GMT.</p><a id="more"></a><h2 id="Arc-ASCII-to-GMT-netCDF"><a href="#Arc-ASCII-to-GMT-netCDF" class="headerlink" title="Arc ASCII to GMT netCDF"></a>Arc ASCII to GMT netCDF</h2><p>My <a href="https://seisfish.github.io/Links/">post</a> on the open databases of Geosciences listed some useful databases. In the figure below, we first selected and downloaded a high-precision Arc ASCII format multi-beam file mar.asc from <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ21ydC5vcmcvR01SVE1hcFRvb2wv" title="https://www.gmrt.org/GMRTMapTool/">GMRT<i class="fa fa-external-link"></i></span>.</p><p><img src="/images/GMRT.jpg" alt></p><p>Then use the xyz2grd command to convert Arc ASCII into GMT netCDF format:</p><blockquote><p>xyz2grd MAR.asc -GMAR.grd -E -V</p></blockquote><p>For ASCII files downloaded from databases such as <span class="exturl" data-url="aHR0cDovL3d3dy5nb2RhYy5qYW1zdGVjLmdvLmpwL2Rhcndpbi9tYXBzZWFyY2gvZSMzNSwxNDgsNQ==" title="http://www.godac.jamstec.go.jp/darwin/mapsearch/e#35,148,5">JAMSTEC<i class="fa fa-external-link"></i></span>, I prefer using nearneighbor interpolation:</p><blockquote><p>blockmean MAR.dat -R-45.6/-44.2/25.3/27 -I0.001 &gt; MAR.xyz<br>nearneighbor MAR.xyz -V -R -I -S0.002 -N2 -GMAR.grd</p></blockquote><p>The output mar.grd file is in GMT netCDF format.</p><h2 id="GMT-netCDF-to-Arc-ASCII"><a href="#GMT-netCDF-to-Arc-ASCII" class="headerlink" title="GMT netCDF to Arc ASCII"></a>GMT netCDF to Arc ASCII</h2><p>When converting the data from GMT netCDF to Arc ASCII format, the netCDF file needs to be re-sampled first so that the sampling rates in the latitude and the longitude are exactly the same, and then converted to Arc ASCII format using the grd2xyz command:</p><blockquote><p>grdsample MAR.grd -I0.001= -GMAR.nc<br>grd2xyz MAR.nc -E &gt; MAR_G.asc</p></blockquote><p>It is important to note here that the -I option in the resampling command must be appended with “=” so that the output mar.nc file is sampled at exactly the same rate in latitude and longitude, so that it can be used for the grd2xyz command to convert data formats.</p><p>The resulting mar_g. asc file is in Arc ASCII format.Calculate hillshade using ArcMAP, and you can see the multi-beam bathymetry of the Mid-Atlantic Ridge segment below:</p><p><img src="/images/conversion.jpg" alt></p><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>The -E option must be added when using the grd2xyz and xyz2grd commands to handle data involving Arc ASCII format!</p><p>When converting from GMT netCDF to Arc ASCII, the -I option in the first step of the resampling command must be added with “=”!</p><p><strong><em>Note</em></strong>: all the GMT codes in this post are of GMT 4 version, which may not work with later versions of GMT.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ArcGIS has unique advantages in spatial analysis of Geographic Information System, so it has become the main tool for my current research. However, in the process of communication, due to the differences in the main tools for data processing and displaying, we often encounter the problem of data format conversion. This post shows you how to use the GMT 4 command to convert the Arc ASCII data format to a netCDF recognized by GMT.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Data processing" scheme="https://seisfish.github.io/categories/Data-processing/"/>
+    
+    
+      <category term="Data Format" scheme="https://seisfish.github.io/tags/Data-Format/"/>
+    
+      <category term="GMT" scheme="https://seisfish.github.io/tags/GMT/"/>
+    
+      <category term="ArcGIS" scheme="https://seisfish.github.io/tags/ArcGIS/"/>
+    
+  </entry>
   
   <entry>
     <title>Where to find an academic open position</title>
